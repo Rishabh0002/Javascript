@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+</head>
+<body>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi odio vitae dolorum. Quaerat modi omnis cum, doloribus id magnam autem eos? Alias, magnam consectetur animi incidunt facere vero inventore at.</h3>
+    <script>
+        //Defining function for calculation.
+        function calculate(type){
+            //Taking initial result value as zero.
+            let ans = 0;
+            //Creating loop for odd index.
+            for(let i=1;i<type.length;i=i+2){
+                //Checking if there is no numerical value.
+                if((isNaN(type[i-1]) || isNaN(type[i+1])) == true){
+                    ans = "Invalid Expression";
+                    break;
+                }
+                //If there is numerical value.
+                else{
+                    //Defining operations to be performed. 
+                    switch(type[i]){
+                        case '+': type[i+1] = ((type[i-1]) + (type[i+1]));
+                        ans = type[i+1].toFixed(2);
+                        break;
+                        case '-': type[i+1] = ((type[i-1]) - (type[i+1]));
+                        ans = type[i+1].toFixed(2);
+                        break;
+                        case '*': type[i+1] = ((type[i-1]) * (type[i+1])).toFixed(2);
+                        ans = type[i+1];
+                        break;
+                        case '/': type[i+1] = ((type[i-1]) / (type[i+1])).toFixed(2);
+                        ans = type[i+1];
+                        break;
+                        case '%': type[i+1] = ((type[i-1]) % (type[i+1])).toFixed(2);
+                        ans = type[i+1];
+                        break;
+                        default: ans = "Invalid Expression";
+                    }
+                }
+            }
+            return ans;
+        }
+    </script>
+</body>
+</html>

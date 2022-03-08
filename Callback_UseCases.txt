@@ -1,0 +1,4 @@
+Use cases of Callback functions:
+1. Calculate() and Dislplay() in Calculator.
+2. Search() and Display() in search engine.
+3. Sort() and Display() for sorting.

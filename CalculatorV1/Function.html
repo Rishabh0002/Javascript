@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos tempora magni placeat ab optio facere maiores quas, quod numquam animi vel totam ratione voluptates, ipsa, nemo maxime aperiam aliquam dignissimos.</h3>
+    <script>
+        //Passing values in an array.
+        // type = ['3','+','4','-','6'];
+        function Calculate(type){ 
+            let ans = 0;
+            //Creating loop for taking odd index for operators.
+            for(let i=1;i<type.length;i = i+2){
+                switch(type[i]){
+                    case '+': type[i+1] = parseInt(type[i-1]) + parseInt(type[i+1]);
+                    ans = type[i+1];
+                    break;
+                    case '-': type[i+1] = parseInt(type[i-1]) - parseInt(type[i+1]);
+                    ans = type[i+1];
+                    break;
+                    case '*': type[i+1] = parseInt(type[i-1]) * parseInt(type[i+1]);
+                    ans = type[i+1];
+                    break;
+                    case '/': type[i+1] = parseInt(type[i-1]) / parseInt(type[i+1]);
+                    ans = type[i+1];
+                    break;
+                    default: return("Invalid expression");
+                    console.log("Invalid expression");
+                    break;
+                }
+            }
+            return ans;
+        }
+        // //Calling the function.
+        // Calculate(type);
+    </script>
+</body>
+</html>

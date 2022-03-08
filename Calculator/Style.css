@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.Calculator{
+    text-align: center;
+    background-color: black;
+    padding: 1%;
+    margin-top: 10%;
+    border-radius: 12%;
+}
+input{
+    font-size: 24px;
+    border: 2px solid black;
+    margin: 1%;
+}
+#Clear{
+    width: 49%;
+    background-color: red;
+}
+#solve{
+    background-color: green;
+}
+button{
+    font-size: 20px;
+    width: 24%;
+    height: 42px;
+    border-radius: 10px;
+    background-color: lightgray;
+}
