@@ -1,5 +1,9 @@
 1. Two operators together. Error = "Invalid Expression".
-2. Two operators together. Error = "Invalid Expression".
+2. Two numeric values together. Answer = forming Number itself.
 3. Two or more decimal points in a numerical value. Error = "Invalid Expression".
 4. + operator in the beginning. Solution = "Number should be considered as positive".
 5. - operator in the beginning. Solution = "Number should be considered as negative".
+6. Operator at the end. Error = "Invalid Expression"
+7. Operator in the beginning(except + and -). Error = "Invalid Expression"
+8. Function should follow BODMOS rule.
+9. Operator can't be used just after decimal point. Error = "Invalid Expression".
